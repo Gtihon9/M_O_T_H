@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MOTH</title>
+</head>
+<body>
+<div>
+    User: {{ user }}
+    <div>
+    {% if user.is_authenticated %}
+        <button>
+            <a href="{% url 'logout' %}">Logout</a>
+        </button>
+
+    {% else %}
+    <button>
+        <a href="{% url 'login' %}">Login</a>
+    </button>
+    <button>
+        <a href="">Register</a>
+    </button>
+
+    {% endif %}
+    </div>
+</div>
+<a href="{% url 'home' %}">Home</a>
+
+{% block content %}
+{% endblock %}
+</body>
+</html>
