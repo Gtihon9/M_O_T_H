@@ -8,23 +8,29 @@
     User: {{ user }}
     <div>
     {% if user.is_authenticated %}
-        <button>
-            <a href="{% url 'logout' %}">Logout</a>
-        </button>
-
+        <a href="{% url 'logout' %}">Logout</a>
     {% else %}
-    <button>
         <a href="{% url 'login' %}">Login</a>
-    </button>
-    <button>
         <a href="{% url 'register' %}">Register</a>
-    </button>
-
     {% endif %}
     </div>
 </div>
-<a href="{% url 'home' %}">Home</a>
+<div style="text-align: right">
+      {% load i18n %}
 
+      {% get_current_language as LANGUAGE_CODE %}
+
+      Current language code: {{ LANGUAGE_CODE }}<br>
+      <button onclick=''>
+        ru
+      </button>
+      <button>
+        en
+      </button>
+      <button>
+        uk
+      </button>
+</div>
 {% block content %}
 {% endblock %}
 </body>

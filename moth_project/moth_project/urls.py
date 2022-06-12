@@ -21,7 +21,4 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', TemplateView.as_view(template_name='moth_site/home.html'), name='home'),
     path('users/', include('users.urls')),
-
-
-
 ]
