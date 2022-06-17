@@ -3,15 +3,9 @@
 <head>
     <title>MOTH</title>
 </head>
-<body>
-    <div class="page-header">
-        <button class="login-button">
-            <a href="{% url 'login' %}" style="color: black">Log in</a>
-        </button>
-        <button class="register-button">
-            <a href="{% url 'register' %}" style="color: black">Register</a>
-        </button>
-        <h1 class="MOth"><a href="{% url 'base' %}" style="color: black; font-size: 160px;">Moth</a></h1>
-    </div>
+<body style="align: center;">
+    <a href="{% url 'login' %}" style="color: black; text-align: center;">Log in</a>
+    <a href="{% url 'register' %}" style="color: black">Register</a>
+    <h1 class="MOth"><a href="{% url 'home' %}" style="color: black; font-size: 160px;">Moth</a></h1>
 </body>
 </html>

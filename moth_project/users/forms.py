@@ -9,14 +9,14 @@ User = get_user_model()
 
 class UserCreationForm(UserCreationForm):
     password1 = forms.CharField(
-        label='Password',
+        label=_('Password'),
         widget=forms.PasswordInput)
     password2 = forms.CharField(
         label='Repeat password',
         widget=forms.PasswordInput)
 
     email = forms.EmailField(
-        label='Email',
+        label=_('Email'),
         max_length=254,
         widget=forms.EmailInput)
     class Meta:

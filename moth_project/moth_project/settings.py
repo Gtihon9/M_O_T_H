@@ -57,6 +57,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
 ]
 
 ROOT_URLCONF = 'moth_project.urls'
@@ -103,6 +104,15 @@ AUTH_PASSWORD_VALIDATORS = []
 # rvphlobvfnluufwl
 
 LANGUAGE_CODE = 'ru-ru'
+LANGUAGES = (
+    ('ru', 'Русский'),
+    ('en', 'English'),
+)
+
+# Кортеж путей к папкам, в которых будут храниться файлы локализации
+LOCALE_PATHS = (
+    os.path.join(BASE_DIR, 'locale'),
+)
 
 TIME_ZONE = 'UTC'
 
